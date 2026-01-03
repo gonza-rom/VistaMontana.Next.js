@@ -125,6 +125,17 @@ export default function Footer() {
           <p className="text-gray-400 animate-fade-in">
             &copy; {new Date().getFullYear()} Hospedaje Vista Montaña. Todos los derechos reservados.
           </p>
+          <p className="text-gray-400 animate-fade-in">
+            Desarrollado por{" "}
+            <a 
+              href="https://gonzalo-romero.netlify.app/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300 transition font-medium"
+            >
+              Gonzalo Romero
+            </a>
+          </p>
         </div>
       </div>
     </footer>

@@ -36,12 +36,12 @@ export default async function Turismo() {
   return (
     <div>
       {/* Header */}
-      <div className="text-white py-16" style={{backgroundColor: '#2D5F3F'}}>
+      <div className="text-white py-16" style={{backgroundColor: '#656B5B', color: 'white'}}>
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-4">
+          <h1 className="text-5xl font-bold mb-4" style={{ color: 'white' }}>
             Lugares para Visitar
           </h1>
-          <p className="text-xl text-gray-100">
+          <p className="text-xl text-gray-100" style={{ color: 'white' }}>
             Descubrí los tesoros naturales de Balcozna y sus alrededores
           </p>
         </div>

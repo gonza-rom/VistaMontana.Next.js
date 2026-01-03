@@ -13,47 +13,65 @@ export default function Navbar() {
 
   const linkClass = (href) =>
     pathname === href
-      ? "font-semibold text-blue-600"
-      : "text-gray-700 hover:text-blue-500";
+      ? "font-semibold"
+      : "hover:opacity-80";
 
   return (
-    <nav className="border-b bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+    <nav className="border-b backdrop-blur-md sticky top-0 z-50 shadow-md" style={{ backgroundColor: '#656B5B' }}>
       <div className="container mx-auto flex justify-between items-center py-4 px-4">
         <Link href="/" className="flex items-center space-x-3 group">
-          <Image
-            src="/logo-montana.png"
-            alt="Hospedaje Vista Montaña"
-            width={64}
-            height={64}
-            className="h-16 w-16 object-contain transition-transform duration-300 group-hover:scale-110"
-          />
-          <span className="text-2xl font-bold text-gray-900 transition-all duration-300 group-hover:text-blue-600">
+          <div className="relative">
+            <div className="absolute inset-0 bg-white opacity-20 blur-xl rounded-full group-hover:opacity-30 transition-opacity duration-300"></div>
+            <Image
+              src="/logo-montana.png"
+              alt="Hospedaje Vista Montaña"
+              width={64}
+              height={64}
+              className="h-16 w-16 object-contain transition-transform duration-300 group-hover:scale-110 relative z-10"
+            />
+          </div>
+          <span className="text-2xl font-bold text-white transition-all duration-300">
             Vista Montaña
           </span>
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6 text-lg">
-          <Link href="/" className={linkClass("/")}>
+        <div className="hidden md:flex space-x-6 text-lg text-white">
+          <Link 
+            href="/" 
+            className={`${linkClass("/")} transition-all duration-300 hover:scale-105 transform`}
+          >
             Inicio
           </Link>
-          <Link href="/alquileres" className={linkClass("/alquileres")}>
+          <Link 
+            href="/alquileres" 
+            className={`${linkClass("/alquileres")} transition-all duration-300 hover:scale-105 transform`}
+          >
             Alquileres
           </Link>
-          <Link href="/galeria" className={linkClass("/galeria")}>
+          <Link 
+            href="/galeria" 
+            className={`${linkClass("/galeria")} transition-all duration-300 hover:scale-105 transform`}
+          >
             Galería
           </Link>
-          <Link href="/turismo" className={linkClass("/turismo")}>
+          <Link 
+            href="/turismo" 
+            className={`${linkClass("/turismo")} transition-all duration-300 hover:scale-105 transform`}
+          >
             Turismo
           </Link>
-          <Link href="/contacto" className={linkClass("/contacto")}>
+          <Link 
+            href="/contacto" 
+            className={`${linkClass("/contacto")} transition-all duration-300 hover:scale-105 transform`}
+          >
             Contacto
           </Link>
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-700 hover:text-blue-600 transition-colors"
+          className="md:hidden text-white hover:opacity-80 transition-opacity"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Menú"
         >
@@ -69,14 +87,14 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200 px-4 py-4">
+        <div className="md:hidden px-4 py-4 animate-slide-down" style={{ backgroundColor: '#4a5544' }}>
           <div className="flex flex-col space-y-3">
             <Link
               href="/"
-              className={`py-2 px-3 rounded-lg transition-colors ${
+              className={`py-2 px-3 rounded-lg transition-colors text-white ${
                 isActive("/")
-                  ? "bg-blue-50 text-blue-600 font-semibold"
-                  : "text-gray-700 hover:bg-gray-50"
+                  ? "bg-white bg-opacity-20 font-semibold"
+                  : "hover:bg-white hover:bg-opacity-10"
               }`}
               onClick={() => setIsOpen(false)}
             >
@@ -84,10 +102,10 @@ export default function Navbar() {
             </Link>
             <Link
               href="/alquileres"
-              className={`py-2 px-3 rounded-lg transition-colors ${
+              className={`py-2 px-3 rounded-lg transition-colors text-white ${
                 isActive("/alquileres")
-                  ? "bg-blue-50 text-blue-600 font-semibold"
-                  : "text-gray-700 hover:bg-gray-50"
+                  ? "bg-white bg-opacity-20 font-semibold"
+                  : "hover:bg-white hover:bg-opacity-10"
               }`}
               onClick={() => setIsOpen(false)}
             >
@@ -95,10 +113,10 @@ export default function Navbar() {
             </Link>
             <Link
               href="/galeria"
-              className={`py-2 px-3 rounded-lg transition-colors ${
+              className={`py-2 px-3 rounded-lg transition-colors text-white ${
                 isActive("/galeria")
-                  ? "bg-blue-50 text-blue-600 font-semibold"
-                  : "text-gray-700 hover:bg-gray-50"
+                  ? "bg-white bg-opacity-20 font-semibold"
+                  : "hover:bg-white hover:bg-opacity-10"
               }`}
               onClick={() => setIsOpen(false)}
             >
@@ -106,10 +124,10 @@ export default function Navbar() {
             </Link>
             <Link
               href="/turismo"
-              className={`py-2 px-3 rounded-lg transition-colors ${
+              className={`py-2 px-3 rounded-lg transition-colors text-white ${
                 isActive("/turismo")
-                  ? "bg-blue-50 text-blue-600 font-semibold"
-                  : "text-gray-700 hover:bg-gray-50"
+                  ? "bg-white bg-opacity-20 font-semibold"
+                  : "hover:bg-white hover:bg-opacity-10"
               }`}
               onClick={() => setIsOpen(false)}
             >
@@ -117,10 +135,10 @@ export default function Navbar() {
             </Link>
             <Link
               href="/contacto"
-              className={`py-2 px-3 rounded-lg transition-colors ${
+              className={`py-2 px-3 rounded-lg transition-colors text-white ${
                 isActive("/contacto")
-                  ? "bg-blue-50 text-blue-600 font-semibold"
-                  : "text-gray-700 hover:bg-gray-50"
+                  ? "bg-white bg-opacity-20 font-semibold"
+                  : "hover:bg-white hover:bg-opacity-10"
               }`}
               onClick={() => setIsOpen(false)}
             >

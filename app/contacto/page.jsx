@@ -38,9 +38,9 @@ export default function Contacto() {
   return (
     <div>
       {/* Hero */}
-      <div className="text-white py-16" style={{backgroundColor: '#656B5B'}}>
+      <div className="py-16" style={{backgroundColor: '#656B5B', color: 'white'}}>
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-4">Contacto</h1>
+          <h1 className="text-5xl font-bold mb-4" style={{ color: 'white' }}>Contacto</h1>
           <p className="text-xl">¿Tenés alguna pregunta? Nos encantaría ayudarte</p>
         </div>
       </div>
@@ -73,10 +73,11 @@ export default function Contacto() {
                 <div>
                   <h3 className="font-bold text-lg mb-1">Teléfono / WhatsApp</h3>
                   <a 
-                    href="https://wa.me/5493834946767" 
+                    href="https://wa.me/543834946767" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-green-600 hover:text-green-700"
+                    className="hover:opacity-80"
+                    style={{color: '#656B5B'}}
                   >
                     +54 9 383 494-6767
                   </a>
@@ -89,7 +90,8 @@ export default function Contacto() {
                   <h3 className="font-bold text-lg mb-1">Email</h3>
                   <a 
                     href="mailto:hospedajevistamontaña@gmail.com"
-                    className="text-green-600 hover:text-green-700"
+                    className="hover:opacity-80"
+                    style={{color: '#656B5B'}}
                   >
                     hospedajevistamontaña@gmail.com
                   </a>
@@ -115,7 +117,8 @@ export default function Contacto() {
                   href="https://www.facebook.com/profile.php?id=61556534558118" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full transition"
+                  className="p-3 rounded-full transition hover:opacity-80"
+                  style={{backgroundColor: '#3b5998', color: 'white'}}
                   aria-label="Facebook"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -126,7 +129,8 @@ export default function Contacto() {
                   href="https://www.instagram.com/vistamontanahospedaje/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="bg-gradient-to-br from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white p-3 rounded-full transition"
+                  className="p-3 rounded-full transition hover:opacity-80"
+                  style={{background: 'linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)', color: 'white'}}
                   aria-label="Instagram"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -134,10 +138,11 @@ export default function Contacto() {
                   </svg>
                 </a>
                 <a 
-                  href="https://wa.me/5493834946767" 
+                  href="https://wa.me/543834946767" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full transition"
+                  className="p-3 rounded-full transition hover:opacity-80"
+                  style={{backgroundColor: '#25D366', color: 'white'}}
                   aria-label="WhatsApp"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -170,13 +175,13 @@ export default function Contacto() {
               <h2 className="text-3xl font-bold mb-6">Envianos un Mensaje</h2>
 
               {exito && (
-                <div className="bg-green-100 text-green-800 p-4 rounded-lg mb-6">
+                <div className="p-4 rounded-lg mb-6" style={{backgroundColor: '#d4edda', color: '#155724'}}>
                   ✓ Mensaje enviado exitosamente. Te responderemos pronto!
                 </div>
               )}
 
               {error && (
-                <div className="bg-red-100 text-red-800 p-4 rounded-lg mb-6">
+                <div className="p-4 rounded-lg mb-6" style={{backgroundColor: '#f8d7da', color: '#721c24'}}>
                   {error}
                 </div>
               )}
@@ -192,7 +197,8 @@ export default function Contacto() {
                     value={formData.nombre}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent"
+                    style={{focusRingColor: '#656B5B'}}
                     placeholder="Tu nombre"
                   />
                 </div>
@@ -207,7 +213,7 @@ export default function Contacto() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent"
                     placeholder="tu@email.com"
                   />
                 </div>
@@ -221,7 +227,7 @@ export default function Contacto() {
                     name="telefono"
                     value={formData.telefono}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent"
                     placeholder="+54 9 383 494-6767"
                   />
                 </div>
@@ -236,7 +242,7 @@ export default function Contacto() {
                     onChange={handleChange}
                     required
                     rows="6"
-                    className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent"
                     placeholder="Contanos en qué podemos ayudarte..."
                   ></textarea>
                 </div>
@@ -244,7 +250,8 @@ export default function Contacto() {
                 <button
                   type="submit"
                   disabled={enviando}
-                  className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition disabled:bg-gray-400"
+                  className="w-full py-3 rounded-lg font-semibold transition disabled:opacity-50"
+                  style={{backgroundColor: '#656B5B', color: 'white'}}
                 >
                   {enviando ? "Enviando..." : "Enviar Mensaje"}
                 </button>

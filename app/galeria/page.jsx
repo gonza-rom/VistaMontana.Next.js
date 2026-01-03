@@ -45,8 +45,8 @@ export default function Galeria() {
       { src: '/mirador-las-lajas3.jpg', alt: 'Panorámica del mirador', title: 'Mirador Las Lajas 3' }
     ],
     vistas: [
-      { src: '/montaña-1.jpg', alt: 'Vista de las montañas', title: 'Montañas 1' },
-      { src: '/montañas-2.jpg', alt: 'Sierras de Catamarca', title: 'Montañas 2' },
+      { src: '/montana-1.jpg', alt: 'Vista de las montañas', title: 'Montañas 1' },
+      { src: '/montanas-2.jpg', alt: 'Sierras de Catamarca', title: 'Montañas 2' },
       { src: '/vista-exterior.jpg', alt: 'Vista exterior del hospedaje', title: 'Vista Exterior' }
     ],
     visitas: [

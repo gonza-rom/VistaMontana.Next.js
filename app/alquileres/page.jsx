@@ -95,7 +95,7 @@ export default async function Alquileres() {
                   </div>
 
                   <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-6 mb-8 border-2 border-green-200">
-                    <p className="text-sm text-gray-600 mb-2">Precio por persona/noche</p>
+                    <p className="text-sm text-gray-600 mb-2">Precio por noche</p>
                     <div className="text-4xl font-bold text-gradient-sierra">
                       ${parseFloat(casaCompleta.precio_por_noche).toLocaleString()}
                     </div>
@@ -188,7 +188,7 @@ export default async function Alquileres() {
                           <div className="text-3xl font-bold text-gradient-sierra">
                             ${parseFloat(habitacion.precio_por_noche).toLocaleString()}
                           </div>
-                          <div className="text-sm text-gray-500">por noche</div>
+                          <div className="text-sm text-gray-500">por persona la noche</div>
                         </div>
                         <Link
                           href={`/alquileres/${habitacion.id}`}

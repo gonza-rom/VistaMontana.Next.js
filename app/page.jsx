@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section with Carousel */}
-      {/* <HeroCarousel /> */}
+      <HeroCarousel />
 
       {/* Características con imágenes */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
@@ -18,7 +18,7 @@ export default function Home() {
             <Link href="/galeria" className="text-center hover-lift p-8 rounded-2xl bg-white shadow-lg transition-all duration-300 group cursor-pointer">
               <div className="relative mb-6 overflow-hidden rounded-2xl h-48">
                 <Image
-                  src="/montañas-2.jpg"
+                  src="/montanas-2.jpg"
                   alt="Vistas increíbles de las montañas"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -104,18 +104,16 @@ export default function Home() {
               </p>
               <Link
                 href="/alquileres"
-                className="inline-block px-8 py-4 rounded-xl font-semibold text-lg text-white transition-all duration-300 hover:scale-105 hover-glow"
-                style={{
-                  background: 'linear-gradient(135deg, #2D5F3F 0%, #4A8B5C 100%)'
-                }}
+                className="inline-block px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 hover-glow"
+                style={{ backgroundColor: '#656B5B', color: 'white' }}
               >
                 Ver Opciones de Alojamiento
               </Link>
             </div>
-            <div>
-              <div className="relative group">
-                <div className="absolute -inset-4 bg-gradient-to-r from-green-400 to-blue-500 rounded-3xl opacity-20 group-hover:opacity-30 blur-xl transition-opacity duration-300"></div>
-                <div className="relative rounded-2xl shadow-2xl overflow-hidden aspect-[9/16]">
+            <div className="flex justify-center">
+              <div className="relative group max-w-md w-full">
+                <div className="absolute -inset-4 rounded-3xl opacity-20 group-hover:opacity-30 blur-xl transition-opacity duration-300" style={{ backgroundColor: '#656B5B' }}></div>
+                <div className="relative rounded-2xl shadow-2xl overflow-hidden aspect-square">
                   <iframe
                     className="absolute top-0 left-0 w-full h-full"
                     src="https://www.youtube.com/embed/y8SgfCrdxME"
@@ -131,6 +129,7 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* Galería rápida con link */}
       <section className="py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
@@ -143,10 +142,8 @@ export default function Home() {
             </p>
             <Link
               href="/galeria"
-              className="inline-flex items-center gap-2 px-6 py-3 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover-glow shadow-lg"
-              style={{
-                background: 'linear-gradient(135deg, #2D5F3F 0%, #4A8B5C 100%)'
-              }}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover-glow shadow-lg"
+              style={{ backgroundColor: '#656B5B', color: 'white' }}
             >
               <span>Ver Galería Completa</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -176,7 +173,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-                  <p className="text-white font-semibold text-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <p className="font-semibold text-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300" style={{color: 'white'}}>
                     {image.alt}
                   </p>
                 </div>
@@ -187,22 +184,22 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0" style={{background: 'linear-gradient(135deg, #2D5F3F 0%, #4A8B5C 50%, #D97642 100%)', opacity: 0.9}}></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-white opacity-10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white opacity-10 rounded-full blur-3xl"></div>
+      <section className="py-20 relative overflow-hidden" style={{ backgroundColor: '#656B5B' }}>
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
         </div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{color: 'white'}}>
             ¿Listo para tu próxima aventura?
           </h2>
-          <p className="text-xl text-white mb-10 max-w-2xl mx-auto">
+          <p className="text-xl mb-10 max-w-2xl mx-auto" style={{color: 'white'}}>
             Contactanos para conocer disponibilidad y reservar tu estadía en las sierras de Catamarca
           </p>
           <Link
             href="/contacto"
-            className="inline-block px-10 py-5 bg-white text-gray-900 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            className="inline-block px-10 py-5 bg-white rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            style={{color: '#656B5B'}}
           >
             Contactar Ahora
           </Link>

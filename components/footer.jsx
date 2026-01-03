@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* About Section */}
           <div className="animate-slide-up">
-            <h3 className="text-2xl font-bold mb-4 text-white">
+            <h3 className="text-2xl font-bold mb-4" style={{ color: 'white' }}>
               Hospedaje Vista Montaña
             </h3>
             <p className="text-gray-300 leading-relaxed">
@@ -26,7 +26,7 @@ export default function Footer() {
 
           {/* Contact Section */}
           <div className="animate-slide-up stagger-1">
-            <h3 className="text-xl font-bold mb-4 text-white">Contacto</h3>
+            <h3 className="text-xl font-bold mb-4" style={{ color: 'white' }}>Contacto</h3>
             <div className="space-y-3">
               <a
                 href="https://maps.google.com/?q=Balcozna,Catamarca"
@@ -56,7 +56,7 @@ export default function Footer() {
 
           {/* Links Section */}
           <div className="animate-slide-up stagger-2">
-            <h3 className="text-xl font-bold mb-4 text-white">Enlaces</h3>
+            <h3 className="text-xl font-bold mb-4" style={{ color: 'white' }}>Enlaces</h3>
             <div className="space-y-3">
               <Link
                 href="/alquileres"
@@ -81,7 +81,7 @@ export default function Footer() {
 
           {/* Social Section */}
           <div className="animate-slide-up stagger-3">
-            <h3 className="text-xl font-bold mb-4 text-white">Seguinos</h3>
+            <h3 className="text-xl font-bold mb-4" style={{ color: 'white' }}>Seguinos</h3>
             <div className="flex space-x-4">
               <a
                 href="https://www.facebook.com/profile.php?id=61556534558118"

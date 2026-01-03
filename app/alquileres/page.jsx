@@ -3,14 +3,20 @@ import Link from "next/link";
 import AlquilerCard from "@/components/AlquilerCard";
 
 export default async function Alquileres() {
-    const db = supabase();
-    const { data: alquileres, error } = await db
-        .from("alquileres")
-        .select("*")
-        .eq("activo", 1)
-        .order("id");
+  const db = supabase();
 
-    console.log({ alquileres, error });
+  const { data: alquileres, error } = await db
+    .from("alojamientos")
+    .select(`
+      id,
+      nombre,
+      precio_por_noche,
+      capacidad,
+      tipo,
+      fotos,
+    `)
+    .eq("activo", true)
+    .order("id");
 
     if (error) {
         return (

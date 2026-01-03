@@ -1,5 +1,6 @@
 import { supabase } from "@/lib/supabase";
 
+
 export default async function Admin() {
   const { data: reservas } = await supabase.from("reservas").select("*");
 

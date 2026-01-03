@@ -15,7 +15,7 @@ export const metadata = {
     siteName: "Vista Montaña",
     images: [
       {
-        url: "/logo-montana.png",
+        url: "/logo-vistamontana.png",
         width: 800,
         height: 800,
         alt: "Hospedaje Vista Montaña",
@@ -28,7 +28,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Vista Montaña - Hospedaje en Balcozna",
     description: "Tu refugio en las sierras de Catamarca",
-    images: ["/logo-montana.png"],
+    images: ["/logo-vistamontana.png"],
   },
   icons: {
     icon: [
